@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700&family=Mukta:wght@400;500;600;700&family=Raleway:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --main: #2b3260;
+    --contrast: #d5e9e8;
+}
+
+body{
+    background-color: var(--main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.time{
+    font-size: 10rem;
+    font-family: 'Libre Franklin', sans-serif;
+    color: var(--contrast);
+    margin-bottom: 30px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 5px var(--contrast);
+}
+
+.links-container{
+    position: absolute;
+    top: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.link-box{
+    background-color: transparent;
+    font-size: 2.2rem;
+    color: var(--contrast);
+    padding: 20px 22px 16px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 3px solid var(--contrast);
+}
+
+.link-box:hover, .link-box:active{
+    background-color: var(--contrast);
+    color: var(--main);
+}
+
+@media (max-width: 880px){
+    .time{
+        font-size: 8rem;
+    }
+
+    .link-box{
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 620px){
+    .time{
+        font-size: 7rem;
+        -webkit-text-stroke: 4px var(--contrast);
+    }
+
+    .links-container{
+        gap: 30px;
+        top: 60%;
+    }
+}
+
+@media (max-width: 530px){
+    .time{
+        font-size: 5.5rem;
+        -webkit-text-stroke: 2.5px var(--contrast);
+    }
+
+    .link-box{
+        border-width: 2px;
+        padding: 16px 17.6px 13px;
+    }
+}
+
+@media (max-width: 420px) {
+    .time{
+        font-size: 4.8rem;
+    }
+
+    .links-container{
+        gap: 20px;
+        top: 55%;
+    }
+}
